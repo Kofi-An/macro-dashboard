@@ -3,7 +3,6 @@
 > Live macro surveillance tool tracking 18+ economic
 > indicators across 10 countries, including Ghana and
 > key African markets. Powered by FRED and World Bank APIs.
-> No data subscriptions required.
 
 ## Live app
 
@@ -130,7 +129,7 @@ streamlit run app.py
 
 ## Author
 
-Kofi-An | Financial Data Scientist
+Kofi Anku | Financial Data Scientist
 Accra, Ghana | Open to remote roles globally
 
 [GitHub](https://github.com/Kofi-An)
