@@ -1,7 +1,7 @@
 # Macroeconomic Intelligence Dashboard
 
 > Live macro surveillance tool tracking 18+ economic
-> indicators across 10 countries — including Ghana and
+> indicators across 10 countries, including Ghana and
 > key African markets. Powered by FRED and World Bank APIs.
 > No data subscriptions required.
 
@@ -34,7 +34,7 @@
 | India | Asia | Fastest growing major economy |
 | Brazil | Latin America | Largest LatAm economy |
 | Nigeria | West Africa | Largest African economy by GDP |
-| Ghana | West Africa | Home market — unique local context |
+| Ghana | West Africa | Home market: unique local context |
 | South Africa | Southern Africa | Most industrialised African economy |
 | Kenya | East Africa | East Africa financial hub |
 
@@ -44,15 +44,15 @@
 
 Most macro dashboards cover the US, Europe, and China.
 This dashboard deliberately includes Ghana and three
-other African markets — providing context that
+other African markets, providing context that
 institutional tools often omit entirely.
 
 Ghana context tracked:
-- GDP growth — including the 2011 oil discovery spike
-- Inflation — including the 2022 crisis where inflation
+- GDP growth: including the 2011 oil discovery spike
+- Inflation: including the 2022 crisis where inflation
   exceeded 50% before the IMF programme
-- FDI inflows — tracking international capital flows
-- GDP per capita — rising living standards over time
+- FDI inflows: tracking international capital flows
+- GDP per capita: rising living standards over time
 
 Africa is the world's fastest-growing fintech market.
 For companies expanding into frontier markets this
@@ -67,8 +67,7 @@ local economic context is invaluable and rare.
 | FRED (Federal Reserve) | 18 US macro series | Hourly cache |
 | World Bank REST API | 10-country comparisons | Daily cache |
 
-All data pulled live — no static files, no stale data.
-Both sources are completely free with no subscription.
+All data pulled live, no static files, no stale data.
 
 ---
 
@@ -83,3 +82,57 @@ Both sources are completely free with no subscription.
 ---
 
 ## Architecture
+
+Modular design, data logic fully separated from
+display logic. Adding a new indicator requires editing
+only data_engine.py.
+
+---
+
+## How to run locally
+
+```bash
+git clone https://github.com/Kofi-An/macro-dashboard
+cd macro-dashboard
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+
+# Create .streamlit/secrets.toml and add:
+# [api_keys]
+# FRED_API_KEY = "your_fred_key_here"
+
+streamlit run app.py
+```
+
+---
+
+## Limitations
+
+- FRED data covers US indicators only
+- World Bank data lags by 1-2 years for some countries
+- Ghana informal economy is not fully captured in
+  official unemployment statistics
+- VIX and S&P 500 reflect US market conditions only
+
+---
+
+## Related projects
+
+- [Credit Risk Scorecard](https://github.com/Kofi-An/credit-risk-scorecard)
+  — AUC 0.71, $275M loss reduction
+- [Portfolio Risk Dashboard](https://kofi-an-portfolio-risk-dashboard.streamlit.app)
+  — Live VaR, CVaR, Monte Carlo app
+- [Fraud Detection](https://github.com/Kofi-An/fraud-detection)
+  — AUC-PR 0.80, 479x over random baseline
+
+---
+
+## Author
+
+Kofi-An | Financial Data Scientist
+Accra, Ghana | Open to remote roles globally
+
+[GitHub](https://github.com/Kofi-An)
+[LinkedIn](www.linkedin.com/in/wka7)
+[Portfolio](https://kofi-an.github.io)
