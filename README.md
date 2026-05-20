@@ -119,11 +119,11 @@ streamlit run app.py
 ## Related projects
 
 - [Credit Risk Scorecard](https://github.com/Kofi-An/credit-risk-scorecard)
-  — AUC 0.71, $275M loss reduction
+  AUC 0.71, $275M loss reduction
 - [Portfolio Risk Dashboard](https://kofi-an-portfolio-risk-dashboard.streamlit.app)
-  — Live VaR, CVaR, Monte Carlo app
+  Live VaR, CVaR, Monte Carlo app
 - [Fraud Detection](https://github.com/Kofi-An/fraud-detection)
-  — AUC-PR 0.80, 479x over random baseline
+  AUC-PR 0.80, 479x over random baseline
 
 ---
 
